@@ -22,7 +22,7 @@ include 'includes/head.php';
         <input 
             type="password" 
             name="password"
-            placeholder="Password"
+            placeholder="Senha"
             required
         >
 
@@ -31,7 +31,7 @@ include 'includes/head.php';
         </a>
 
         <button type="submit" class="login-button">
-            Sign in
+            Entrar
         </button>
 
     </form>

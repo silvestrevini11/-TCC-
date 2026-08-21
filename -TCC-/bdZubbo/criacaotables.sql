@@ -5,7 +5,7 @@ create table Usuario(
 id_user int primary key auto_increment,
 nome_user varchar(50) not null,
 email_user varchar(70) not null,
-tel_user varchar(20) not null,
+tel_user char(20) not null,
 datanasc_user date not null
 );
 
@@ -68,7 +68,7 @@ create table evento (
     id_criador int not null,
 
     constraint fk_evento_esporte foreign key (id_esporte) references esporte(id_esporte),
-
+	constraint fklocal_evento foreign key (id_local) references LocalEsp(id_local),
     constraint fk_evento_usuario foreign key (id_criador) references usuario(id_user)
 );
 
@@ -114,7 +114,13 @@ create table sugestao_esporte (
     constraint fk_sugestao_usuario foreign key (id_user)
     references usuario(id_user)
 );
-
+create table LocalEsp(
+id_local int primary key auto_increment,
+nome_local varchar(60) not null,
+endereco_local varchar(120) not null,
+tipo_local enum('quadra', 'poliesportivo', 'clube', 'ginásio') not null
+ default 'poliesportivo'
+);
 
 alter table Mensagem
 	add constraint id_conversaFK foreign key (id_conversa) references Conversa(id_conversa); 
