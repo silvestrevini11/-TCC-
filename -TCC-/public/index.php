@@ -1,5 +1,5 @@
 <?php
-include __DIR__.'/includes/head.php';
+include __DIR__.'/../app/views/includes/head.php';
 ?>
 <section class="Tela-init">
 
@@ -13,13 +13,13 @@ include __DIR__.'/includes/head.php';
 <h2 class="Sub-titulo-init">Encontre. Pratique. <strong>Conecte-se</strong></h2>
 <p class="desc-init">Descubra lugares e pessoas para praticar esportes perto de você</p>
 
-<button onclick="window.location.href='login.php';" class="btn-entrar-init">Entrar</button>
-<button onclick="window.location.href='cadastro.php';" class="btn-criar-init">Criar Conta</button>
+<button onclick="window.location.href='../app/views/auth/login.php';" class="btn-entrar-init">Entrar</button>
+<button onclick="window.location.href='../app/views/auth/cadastro.php';" class="btn-criar-init">Criar Conta</button>
 
 <p class="under-init">Inclusão, esporte e comunidade em um só lugar.</p>
 
 </section>
 
 <?php
-include __DIR__.'/includes/footer.php';
+include __DIR__.'/../app/views/includes/head.php';
 ?>

@@ -1,12 +1,11 @@
 <?php
-include __DIR__.'/includes/head.php';
 
 if(!isset($_SERVER['REQUEST_METHOD'])==="POST"){
     header('Location:form-usuario.php');
     die();
 }
 // if(empty($_POST['name']),empty($_POST['name']))
-include __DIR__.'/database.php';
+include __DIR__.'/../../../config/database.php'; 
 $nome=$_POST['name-txt'];
 $email=$_POST['email-txt'];
 $telefone=$_POST['telefone-tel'];
@@ -22,6 +21,4 @@ $stmt->bindParam(5,$data);
 $stmt->execute();
 
 header('Location: login.php');
-
-include __DIR__.'/includes/footer.php';
 ?>

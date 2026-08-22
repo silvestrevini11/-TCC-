@@ -1,16 +1,17 @@
 <?php
-include 'includes/head.php';
+session_start();
+include __DIR__.'/../includes/head.php';
 ?>
 
 <main class="login-container">
 
-    <img src="imagem/LogooZ.png" alt="Logo Zubbo" class="login-logo">
+    <img src="../../../public/imagem/LogooZ.png" alt="Logo Zubbo" class="login-logo">
 
     <h1>Entrar</h1>
 
     <p class="login-subtitle">Que bom te ver de novo!</p>
 
-    <form action="Painel-inicial.php" method="POST">
+    <form action="../painel/Painel-inicial.php" method="POST">
 
         <input 
             type="email" 
@@ -22,7 +23,7 @@ include 'includes/head.php';
         <input 
             type="password" 
             name="password"
-            placeholder="Password"
+            placeholder="Senha"
             required
         >
 
@@ -31,7 +32,7 @@ include 'includes/head.php';
         </a>
 
         <button type="submit" class="login-button">
-            Sign in
+            Entrar
         </button>
 
     </form>
@@ -64,5 +65,5 @@ include 'includes/head.php';
 </main>
 
 <?php
-include 'includes/footer.php';
+include __DIR__.'/../includes/footer.php';
 ?>
